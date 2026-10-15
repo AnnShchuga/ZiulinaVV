@@ -22,7 +22,7 @@ body.t-superpower .btn:not(.solid):hover{background:var(--butter);color:#1a0c10}
 body.t-superpower h1 b{color:var(--acc)}
 body.t-superpower .hero-photo img{box-shadow:0 30px 70px -26px rgba(212,65,74,.45)}
 body.t-superpower .hero-photo::before{border-color:var(--butter);opacity:.7}
-body.t-superpower .split-img img[src$=".png"]{filter:invert(1) drop-shadow(0 0 22px rgba(212,65,74,.35))}
+body.t-superpower .split-img img{mix-blend-mode:lighten;border-radius:14px}
 body.t-superpower .price,body.t-superpower .pricebox b{color:var(--butter)}
 body.t-superpower .cookie,body.t-superpower .ddm::before{background:var(--card)}
 body.t-superpower .rv{background:#2a0c12;border:1px solid #4d1d25}
