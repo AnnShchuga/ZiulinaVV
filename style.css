@@ -182,7 +182,9 @@ a.card:hover{border-color:var(--acc);transform:translateY(-4px);box-shadow:0 20p
 .lead-form .consent a{color:#fff;text-decoration:underline;text-underline-offset:3px}
 .lead-hint{font-size:13px;color:#8e887a;margin-top:18px}
 footer{background:var(--bg2);border-top:1px solid var(--line);padding:60px 0 34px;font-size:15px;color:var(--mute)}
-.fgrid{display:grid;grid-template-columns:1.2fr 1.3fr 1fr 1.3fr;gap:40px;align-items:start}
+.fgrid{display:grid;grid-template-columns:1.1fr .9fr 1.2fr 1.3fr 1.3fr;gap:34px;align-items:start}
+.fsub{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--acc);margin:14px 0 2px;font-weight:500}
+footer h4 a{color:inherit}footer h4 a:hover{color:var(--acc)}
 .fbrand{font-size:24px;font-weight:500;color:var(--ink);margin-bottom:8px}
 footer h4{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);font-weight:500;margin-bottom:14px}
 footer .fgrid a:not(.btn){display:block;padding:4px 0;transition:.2s}
