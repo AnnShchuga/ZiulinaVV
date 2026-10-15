@@ -13,6 +13,11 @@ document.querySelectorAll('.carousel').forEach(function(c){var tr=c.querySelecto
 document.querySelectorAll('.test-form').forEach(function(f){var c=f.querySelector('.tcount'),tot=parseInt(f.dataset.total,10);
  function upd(){var names={};f.querySelectorAll('input[type=radio]:checked').forEach(function(r){names[r.name]=1});c.textContent='Отвечено: '+Object.keys(names).length+' из '+tot}
  f.addEventListener('change',upd);upd()});
+(function(){var c=document.getElementById('cookie');if(!c)return;var k='vz-cookie',v=null;
+ try{v=localStorage.getItem(k)}catch(e){}
+ if(!v)c.hidden=false;
+ c.addEventListener('click',function(e){var b=e.target.closest('button[data-c]');if(!b)return;
+  try{localStorage.setItem(k,b.dataset.c)}catch(x){}c.hidden=true})})();
 document.querySelector('.burger')?.addEventListener('click',()=>document.querySelector('nav.menu').classList.toggle('open'));
 const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.1});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
