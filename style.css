@@ -115,6 +115,14 @@ a.card:hover{border-color:var(--acc);transform:translateY(-4px);box-shadow:0 20p
 .rv{background:var(--dark);color:#ece6d6;border-radius:16px;padding:34px;position:relative}
 .rv::before{content:"“";position:absolute;right:26px;top:8px;font-size:90px;color:var(--acc);line-height:1;font-weight:200}
 .rv p{font-size:18px;line-height:1.55;font-weight:300;margin-top:28px}
+.carousel{position:relative}
+.rev-track{display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 2px 8px;scrollbar-width:none;outline:0}
+.rev-track::-webkit-scrollbar{display:none}
+.rev-track .rv{flex:0 0 min(420px,86%);scroll-snap-align:start}
+.rv mark{background:rgba(255,107,0,.28);color:#fff;border-radius:4px;padding:1px 5px;margin:0 -1px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.car-ctl{display:flex;justify-content:flex-end;gap:12px;margin-top:22px}
+.car-btn{width:52px;height:52px;border-radius:50%;border:1px solid var(--acc);background:transparent;color:var(--acc);font:400 22px/1 'Fira Sans',sans-serif;cursor:pointer;transition:.25s}
+.car-btn:hover{background:var(--acc);color:#fff}
 .rv small{display:block;margin-top:22px;color:#9d9788;font-size:13px}
 .note{background:var(--card);border-left:3px solid var(--acc);padding:18px 22px;border-radius:6px;color:var(--mute);font-size:15px;margin-top:34px}
 .chips{display:flex;flex-wrap:wrap;gap:10px;margin:-20px 0 34px}
