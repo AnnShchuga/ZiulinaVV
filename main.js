@@ -21,9 +21,16 @@ document.querySelectorAll('.test-form').forEach(function(f){var c=f.querySelecto
 document.querySelector('.burger')?.addEventListener('click',()=>document.querySelector('nav.menu').classList.toggle('open'));
 const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.1});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-document.querySelectorAll('.chips').forEach(c=>c.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;
- c.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));const k=b.dataset.k;const g=c.nextElementSibling;
- if(g)g.querySelectorAll('[data-cat]').forEach(m=>m.style.display=(k==='all'||m.dataset.cat===k)?'':'none')}));
+document.querySelectorAll('.chips').forEach(c=>{const g=c.nextElementSibling;if(!g)return;
+ const items=[...g.querySelectorAll('[data-cat]')],per=parseInt(g.dataset.per||'0',10);
+ const btn=g.nextElementSibling&&g.nextElementSibling.querySelector?g.nextElementSibling.querySelector('.more-btn'):null;
+ let shown=per,cat='all';
+ function render(){let n=0;items.forEach(m=>{const ok=cat==='all'||m.dataset.cat===cat;let vis=ok;if(ok&&per&&cat==='all'){n++;vis=n<=shown}m.style.display=vis?'':'none'});
+  if(btn){const more=per&&cat==='all'&&shown<items.length;btn.parentElement.style.display=more?'':'none';if(more)btn.textContent='Показать ещё ('+(items.length-shown)+')'}}
+ c.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;
+  c.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));cat=b.dataset.k;render()});
+ if(btn)btn.addEventListener('click',()=>{shown+=per;render()});
+ render()});
 document.querySelectorAll('.lead-form').forEach(f=>f.addEventListener('submit',e=>{e.preventDefault();
  const n=f.querySelector('[name=n]').value.trim(),c=f.querySelector('[name=c]').value.trim();
  const t='Здравствуйте! Меня зовут '+(n||'—')+'. Хочу записаться на консультацию. Как со мной удобно связаться: '+(c||'—');
