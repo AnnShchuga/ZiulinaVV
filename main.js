@@ -10,6 +10,9 @@ document.querySelectorAll('.carousel').forEach(function(c){var tr=c.querySelecto
   var card=tr.firstElementChild;var step=card?card.getBoundingClientRect().width+24:360;
   tr.scrollBy({left:step*parseInt(b.dataset.dir,10),behavior:'smooth'})})});
  tr.addEventListener('scroll',upd,{passive:true});window.addEventListener('resize',upd);upd()});
+document.querySelectorAll('.test-form').forEach(function(f){var c=f.querySelector('.tcount'),tot=parseInt(f.dataset.total,10);
+ function upd(){var names={};f.querySelectorAll('input[type=radio]:checked').forEach(function(r){names[r.name]=1});c.textContent='Отвечено: '+Object.keys(names).length+' из '+tot}
+ f.addEventListener('change',upd);upd()});
 document.querySelector('.burger')?.addEventListener('click',()=>document.querySelector('nav.menu').classList.toggle('open'));
 const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.1});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
