@@ -259,6 +259,11 @@ h2.inline{display:block;margin-bottom:22px}h2.inline::before{margin-bottom:18px}
 .sos-big{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--acc);border-radius:16px;padding:26px 26px 24px;display:flex;flex-direction:column;gap:10px}
 .sos-big h3{font-size:19px;margin:0}.sos-big p{color:var(--mute);font-size:15.5px;margin:0}
 .sos-hours{font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--acc)}
+.sos-big.wide3{grid-column:1/-1;flex-direction:row;align-items:center;gap:28px;flex-wrap:wrap}
+.sos-big.wide3 .rrc-main{flex:1 1 380px}
+.sos-big.wide3 .sos-tels{margin:0;padding:0;flex:1 1 360px;justify-content:flex-end}
+.sos-big .tel.tel-out{background:transparent;color:var(--acc);border:1px solid var(--acc);font-size:16px}
+.sos-big .tel.tel-out:hover{background:var(--acc);color:#fff;filter:none}
 .sos-big.wide{grid-column:span 2;flex-direction:row;align-items:center;gap:30px}
 .sos-big.wide img{width:270px;max-width:40%;flex:0 0 auto}
 .sos-big.wide>div{display:flex;flex-direction:column;gap:10px;flex:1}
