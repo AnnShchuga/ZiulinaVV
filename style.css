@@ -245,7 +245,7 @@ fieldset.q legend{font-size:18px;line-height:1.45;padding:0;float:left;width:100
 .qn{display:block;color:var(--acc);font-size:13px;letter-spacing:.08em;margin-bottom:4px}
 .opts{clear:both;display:flex;flex-wrap:wrap;gap:8px}
 .opts input{position:absolute;opacity:0;pointer-events:none}
-.opts label{border:1px solid var(--line);border-radius:30px;padding:8px 16px;cursor:pointer;font-size:15px;line-height:1.35;transition:.2s;background:var(--bg)}
+.opts label{border:1px solid var(--line);border-radius:16px;padding:8px 16px;cursor:pointer;font-size:15px;line-height:1.35;transition:.2s;background:var(--bg)}
 .opts label:hover{border-color:var(--acc)}
 .opts input:checked+label{background:var(--acc);border-color:var(--acc);color:#fff}
 .opts input:focus-visible+label{outline:2px solid var(--acc);outline-offset:2px}
