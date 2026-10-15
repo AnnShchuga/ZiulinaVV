@@ -17,8 +17,8 @@ document.querySelector('.burger')?.addEventListener('click',()=>document.querySe
 const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.1});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 document.querySelectorAll('.chips').forEach(c=>c.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;
- c.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));const k=b.dataset.k;
- document.querySelectorAll('[data-cat]').forEach(m=>m.style.display=(k==='all'||m.dataset.cat===k)?'':'none')}));
+ c.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));const k=b.dataset.k;const g=c.nextElementSibling;
+ if(g)g.querySelectorAll('[data-cat]').forEach(m=>m.style.display=(k==='all'||m.dataset.cat===k)?'':'none')}));
 document.querySelectorAll('.lead-form').forEach(f=>f.addEventListener('submit',e=>{e.preventDefault();
  const n=f.querySelector('[name=n]').value.trim(),c=f.querySelector('[name=c]').value.trim();
  const t='Здравствуйте! Меня зовут '+(n||'—')+'. Хочу записаться на консультацию. Как со мной удобно связаться: '+(c||'—');
