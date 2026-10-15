@@ -107,6 +107,7 @@ a.card:hover{border-color:var(--acc);transform:translateY(-4px);box-shadow:0 20p
 .band p{max-width:620px;margin:-24px auto 36px;color:#cfc8b8;font-size:18px}
 .band svg{position:absolute;left:50%;top:50%;width:900px;height:900px;transform:translate(-50%,-50%);opacity:.22;pointer-events:none}
 .band .wrap{position:relative}
+.band.lead svg{width:720px;height:720px;top:30%;opacity:.2}
 .band .btn.solid,.band .btn.solid:hover{background:var(--butter);color:#2b3f23;box-shadow:0 10px 40px -10px rgba(230,194,107,.5)}
 .band .sub{margin:22px 0 0;font-size:14px;color:#9d9788}
 .chg{display:grid;grid-template-columns:repeat(2,1fr);gap:50px 70px}
