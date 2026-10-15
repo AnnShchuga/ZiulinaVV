@@ -1,4 +1,8 @@
 
+(function(){var b=document.querySelector('.totop');if(!b)return;
+ function t(){b.classList.toggle('show',window.scrollY>500)}
+ window.addEventListener('scroll',t,{passive:true});t();
+ b.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})})})();
 document.querySelector('.burger')?.addEventListener('click',()=>document.querySelector('nav.menu').classList.toggle('open'));
 const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.1});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
